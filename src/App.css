@@ -1,16 +1,15 @@
+.App-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
+  height: 70%;
+  width: 80%;
+  border: 2px solid green;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -35,4 +34,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+input {
+  height: 4vh;
+}
+
+.big-search {
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.inventory-section, .search-section, .bookmark-section {
+  padding-bottom: 4%;
+}
+
+.search-section {
+  text-align: center;
+}
+
+button {
+  border-radius: 20px;
+  text-align: center;
+  padding: 4%;
+  background-color: pink;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.ingredient-list, .recipe-list {
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
+  padding-left: 0;
+}
+
+.ingredient, .recipe {
+  margin: 0 auto;
+  width: 100%;
+  list-style: none;
 }
