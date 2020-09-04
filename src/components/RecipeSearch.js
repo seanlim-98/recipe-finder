@@ -11,16 +11,12 @@ let resultArr = [
 class RecipeSearch extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            
-        }
     }
 
     searchRecipe = () => {
         if(this.props.availableIng.length !== 0) {
-          let chosen = this.props.availableIng[Math.floor(Math.random() * this.props.availableIng.length)];
-            fetch(`https://api.edamam.com/search?q=${chosen}&app_id=3e3ca772&app_key=
-            adc631787b99b184e7717a2f854c953c`)
+            let chosen = this.props.availableIng[Math.floor(Math.random() * this.props.availableIng.length)];
+            fetch(`https://api.edamam.com/search?q=${chosen}&app_id=3e3ca772&app_key=adc631787b99b184e7717a2f854c953c`)
             .then(response => response.json())
             .then(res => {
                 if (resultArr.length !== 0) {

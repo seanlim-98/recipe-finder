@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 const Inventory = (props) => {
     let { availableIng } = props;
     return(
-
         <div>
             <h4>Inventory</h4>
             <ul className='ingredient-list'>
@@ -12,7 +11,6 @@ const Inventory = (props) => {
                 })}
             </ul>
         </div>
-        
     );
 }
 

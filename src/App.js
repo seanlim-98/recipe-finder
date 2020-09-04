@@ -3,14 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Inventory from './components/Inventory';
 import RecipeSearch from './components/RecipeSearch';
-import ShoppingList from './components/ShoppingList';
-
-/* Functionality to work on 
-1) Select button for recipe - indicate it's selected
-2) Adds ingredients for that recipe to Shopping List 
-3) Update state
-4) Check for matches between Shopping List and Inventory
-*/ 
+import SavedList from './components/SavedList';
 
 class App extends Component {
 	constructor(props) {
@@ -45,9 +38,9 @@ class App extends Component {
 	}
 
 	saveRecipe = (name) => {
-		let resArr = this.state.savedRecipes;
-		resArr.push(name);
-		this.setState({savedRecipes: resArr})
+		let savedRecipeList = this.state.savedRecipes;
+		savedRecipeList.push(name);
+		this.setState({savedRecipes: savedRecipeList})
 	}
 
 	render() {
@@ -70,7 +63,7 @@ class App extends Component {
 					    	</ul>
 					    </div>
 					    <div className="bookmark-section">
-					    	<ShoppingList updatedList={this.state.savedRecipes}/>
+					    	<SavedList updatedList={this.state.savedRecipes}/>
 					    </div>
 			    	</div>	
 			    </div>

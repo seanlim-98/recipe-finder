@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ShoppingList extends Component {
+class SavedList extends Component {
     constructor(props) {
         super(props);
     }
@@ -21,4 +21,4 @@ class ShoppingList extends Component {
     }
 }
 
-export default ShoppingList;
+export default SavedList;
